@@ -45,7 +45,15 @@ if (localStorage.jwtToken) {
   }
 }
 class App extends Component {
+  componentDidMount() {
+    // If logged in and user navigates to Login page, should redirect them to dashboard
+    if (localStorage.jwtToken) {
+      document.getElementById("subNav").style.display = "flex";
+    }else{
+      document.getElementById("subNav").style.display = "none";
 
+    }
+  }
   render() {
     return (
       <Provider store={store}>
@@ -61,7 +69,7 @@ class App extends Component {
                 <Dashboard></Dashboard>
               </Container>
             </Navbar>
-            <Nav className="justify-content-center color-sub-nav">
+            <Nav id="subNav" className="justify-content-center color-sub-nav">
               <Link to={"/home"} className="nav-link navi-sub-link">
                 Página principal
               </Link>

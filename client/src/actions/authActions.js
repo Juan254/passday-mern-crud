@@ -2,13 +2,14 @@ import axios from "axios";
 import setAuthToken from "../utils/setAuthToken";
 import jwt_decode from "jwt-decode";
 import { GET_ERRORS, SET_CURRENT_USER, USER_LOADING } from "./types";
+import { BrowserRouter as Redirect } from "react-router-dom";
 
 export default setAuthToken;
 // Register User
 export const registerUser = (userData, history) => (dispatch) => {
   axios
     .post("/api/users/register", userData)
-    .then((res) => history.push("/login")) // re-direct to login on successful register
+    //.then((res) => history.push("/")) // re-direct to login on successful register
     .catch((err) =>
       dispatch({
         type: GET_ERRORS,
@@ -60,5 +61,4 @@ export const logoutUser = (history) => (dispatch) => {
   setAuthToken(false);
   // Set current user to empty object {} which will set isAuthenticated to false
   dispatch(setCurrentUser({}));
-  window.history.replaceState(null, "", "/login")
 };

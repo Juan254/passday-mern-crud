@@ -33,7 +33,7 @@ code {
   color: #81b214;
 }
 .nav-link.navi-sub-link, .dropdown-toggle.nav-link {
-  color: #ffcc29;
+  color: aliceblue;
   font-size: 18px;
   text-decoration: none;
 }
@@ -120,4 +120,7 @@ tr>th{
 }
 .logout-part, .login-part{
   display: block;
+}
+.orange-welcome{
+  color: #F58634;
 }

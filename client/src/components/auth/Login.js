@@ -24,12 +24,14 @@ class Login extends Component {
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-    this.props.history.push("/passday-list");
+      // this.props.history.push("/passday-list");
+      window.location.href = "./passday-list";
     }
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/passday-list"); // push user to dashboard when they login
+      // this.props.history.push("/passday-list"); // push user to dashboard when they login
+      window.location.href = "./passday-list";
     }
     if (nextProps.errors) {
       this.setState({
@@ -40,19 +42,22 @@ class Login extends Component {
   onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
+
   onSubmit = (e) => {
     e.preventDefault();
     const userData = {
       email: this.state.email,
       password: this.state.password,
     };
-    this.props.loginUser(userData); // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
-    window.location.reload(false);
+    
+      this.props.loginUser(userData);
+
+    // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
   };
   render() {
     const { errors } = this.state;
     return (
-      <Form  noValidate onSubmit={this.onSubmit}>
+      <Form noValidate onSubmit={this.onSubmit}>
         <Row>
           <Col sm={3}></Col>
           <Col sm={6}>
@@ -129,7 +134,7 @@ class Login extends Component {
                 />
               </Col>
             </Form.Group>
-            
+
             <Row id="fila-errores" className="my-3" style={{ display: "none" }}>
               <Alert variant="danger">
                 <Alert.Heading>Errores encontrados:</Alert.Heading>
