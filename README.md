@@ -1,6 +1,4 @@
-[[_TOC_]]
-
-#Introducción
+# Introducción
 
 Éste proyecto se realizó con el propósito de cumplir con los requisitos del ciclo 4 propuestos por el MinTIC. El documento contiene los diferentes mecanismo, metodologías y herramientas que se utilizaron para el desarrollo de éste proyecto, además de definir el proyecto y sus actores.
 
@@ -125,8 +123,6 @@ el proyecto propuesto por MinTic se compone de 6 Sprint(contando el sprint 0), d
 
 # Documentación:
 
-- [historias de usuario Pasadías.pdf](/.attachments/historias%20de%20usuario%20Pasadías-5e4d68a2-6ffd-4106-b510-4cff06ef3ea5.pdf)
-- [Mockups - justinmind en pdf](/.attachments/Mockups%20-justinmind-c0f60967-6b1b-41cb-9527-e0d5053fd3c4.pdf)
-- [mockups en archivo justinmind](https://drive.google.com/file/d/1XerRXXsIbiZ4KksXeZvw1CVFOMuKSqF4/view?usp=sharing)
-- [mockups en drive](https://drive.google.com/drive/folders/1zBNPjjxemsaulLPmlT2J9tzlVI1CqRcR?usp=sharing)
-- [Mapa de navegación](/.attachments/Mapa%20de%20navegación-c88210c0-cd5a-4f67-a0fb-63314bb2be6d.pdf)
+-  [historias de usuario Pasadías-5e4d68a2-6ffd-4106-b510-4cff06ef3ea5 (2).pdf](https://github.com/Juan254/passday-mern-crud/files/6970686/historias.de.usuario.Pasadias-5e4d68a2-6ffd-4106-b510-4cff06ef3ea5.2.pdf)
+- [Mapa de navegación.pdf](https://github.com/Juan254/passday-mern-crud/files/6970689/Mapa.de.navegacion.pdf)
+- [Mockups -justinmind-c0f60967-6b1b-41cb-9527-e0d5053fd3c4 (2).pdf](https://github.com/Juan254/passday-mern-crud/files/6970692/Mockups.-justinmind-c0f60967-6b1b-41cb-9527-e0d5053fd3c4.2.pdf)
