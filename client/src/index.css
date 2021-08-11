@@ -115,3 +115,9 @@ tr>th{
   color: aliceblue;
   font-weight: normal;
 }
+.lista-errors {
+  text-align: initial;
+}
+.logout-part, .login-part{
+  display: block;
+}

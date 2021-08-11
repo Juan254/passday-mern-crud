@@ -7,6 +7,7 @@ export default class PassdayList extends Component {
   render() {
     return (
       <div className="table-wrapper">
+       
         <ModalTitle className="mb-4" style={{ fontSize: 30 }}>
               Lista de pasadías
             </ModalTitle>
