@@ -1,65 +1,112 @@
-import React, { Component } from "react";
+import {
+  BrowserRouter as Component,
+  Router,
+  Route,
+  Switch,
+  Link,
+} from "react-router-dom";
+
+import axios from "axios";
+
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
-import ModalTitle from "react-bootstrap/ModalTitle";
+import Table from "react-bootstrap/Table";
 import FormText from "react-bootstrap/FormText";
-import { Link } from "react-router-dom";
-import Logo from "../logo.svg";
 export default class EditPassday extends Component {
+  constructor(props) {
+    super(props);
+
+    // State
+    this.state = {
+      Departamento: "",
+      Costo: "",
+      Ciudad: "",
+      Actividad: "",
+      Imagen: "",
+      Tipo: "",
+      Descripción: "",
+      URL: "",
+      mail: "",
+      Celular: "",
+      NIT: "",
+      RNT: "",
+    };
+  }
+  componentDidMount() {
+    axios
+      .get(
+        "/api/pasadias/edit/" +
+          this.props.history.location.pathname.split("/passday-detail/")[1]
+      )
+      .then((res) => {
+        this.setState({
+          Departamento: res.data.Departamento,
+          Costo: res.data.Costo,
+          Ciudad: res.data.Ciudad,
+          Actividad: res.data.Actividad,
+          Imagen: res.data.Imagen,
+          Tipo: res.data.Tipo,
+          Descripción: res.data.Descripción,
+          URL: res.data.URL,
+          mail: res.data.mail,
+          Celular: res.data.Celular,
+          NIT: res.data.NIT,
+          RNT: res.data.RNT,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    // console.log()
+  }
   render() {
     return (
       <Container className="my-1">
         <Row>
-          <Col sm={5}>
+          <Col sm={6} className="display-block mb-3">
             <Image
-              className="d-block w-100 border border-dark"
-              src={Logo}
+              className="imagen-detail"
+              src={this.state.Imagen}
             ></Image>
           </Col>
-          <Col>
-            <Row>
-              <ModalTitle className="mb-5" style={{ fontSize: 40 }}>
-                Título de la pasadía
-              </ModalTitle>
-            </Row>
-            <Row className="mb-5">
-              <Col sm={5}>
-                <h2>Región:</h2>
-              </Col>
-              <Col sm={2}></Col>
-              <Col sm={5} style={{ fontSize: 30 }}>
-                <p>Mi Región</p>
-              </Col>
-            </Row>
-            <Row className="mb-5">
-              <Col sm={5}>
-                <h2>Costo:</h2>
-              </Col>
-              <Col sm={2}></Col>
-              <Col sm={5} style={{ fontSize: 30 }}>
-                <p>$XXXXX</p>
-              </Col>
-            </Row>
+          <Col sm={6}>
+          <Table bordered >
+            <tbody>
+              <tr>
+                <td class="table-head">Tipo de Actividad</td>
+                <td >{this.state.Actividad}</td>
+              </tr>
+              <tr>
+                <td class="table-head">Costo</td>
+                <td>{this.state.Costo}</td>
+              </tr>
+              <tr>
+                <td class="table-head">Departamento</td>
+                <td>{this.state.Departamento}</td>
+              </tr>
+              <tr>
+                <td class="table-head">Ciudad</td>
+                <td>{this.state.Ciudad}</td>
+              </tr>
+              
+              <tr>
+                <td class="table-head">Celular</td>
+                <td>{this.state.Celular}</td>
+              </tr>
+              <tr>
+                <td class="table-head">Correo</td>
+                <td>{this.state.mail}</td>
+              </tr>
+            </tbody>
+          </Table>
           </Col>
         </Row>
+        <hr/>
         <FormText>
           <p class="text-detail">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit facilisis
-            velit sapien, lacinia vivamus odio laoreet phasellus ullamcorper
-            dictum donec. Praesent ridiculus primis varius blandit fringilla
-            vehicula, vel taciti scelerisque commodo sed euismod ultricies,
-            metus suscipit etiam et rutrum. Velit sociosqu dui habitant dis
-            vulputate cum suscipit tortor, diam duis donec litora et mattis nibh
-            luctus sagittis, phasellus himenaeos porttitor lectus neque pulvinar
-            eget. Class facilisis velit turpis pretium quam magnis, urna laoreet
-            dictumst platea dis, potenti a mattis volutpat scelerisque. Fusce
-            lectus nam semper fames lobortis pellentesque orci sociis vivamus,
-            odio laoreet nisi etiam elementum gravida dapibus primis. Fermentum
-            morbi maecenas varius accumsan ullamcorper dis natoque hendrerit
-            molestie porttitor nisl, vivamus consequat tellus duis aenean
-            blandit senectus quisque habitant rutrum.
+            <p>{this.state.Descripción}</p>
           </p>
         </FormText>
         <Row>

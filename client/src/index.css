@@ -124,3 +124,19 @@ tr>th{
 .orange-welcome{
   color: #F58634;
 }
+.card-img-top{
+  height: 200px;
+}
+.card.border-primary{
+  border-color: #7f9948 !important; 
+}
+
+.imagen-detail{
+  width: 500px !important;
+  height: 245px !important;
+}
+.table.table-bordered>tbody>tr>td[class="table-head"]{
+  background-color: #206a5d;
+  color: aliceblue;
+  font-weight: bold;
+}
