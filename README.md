@@ -104,7 +104,7 @@ el proyecto propuesto por MinTic se compone de 6 Sprint(contando el sprint 0), d
 | <center> ![react.png](/.attachments/react-f7640fe8-73d0-466b-b548-be4e260c32f5.png) </center> | **React:** React te ayuda a crear interfaces de usuario interactivas de forma sencilla. Diseña vistas simples para cada estado en tu aplicación, y React se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien.[Más información Aquí](https://es.reactjs.org/)|
 |<center> ![justinmind.png](/.attachments/justinmind-9d7c79ff-ba54-46ad-83fa-daf32b7fb775.png) </center>  | **Justinmind:** es una herramienta de creación de prototipos y wireframing para la creación de prototipos de alta fidelidad de aplicaciones web y móviles. [Más información Aquí](https://www.justinmind.com/) |
 
-##Aplicativos de ayuda:
+## Aplicativos de ayuda:
 ---
 |**logo del Aplicativo**| **Descripción del aplicacivo**|
 |--|--|
