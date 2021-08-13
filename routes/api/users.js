@@ -94,7 +94,7 @@ router.post("/login", (req, res) => {
 });
 
 // Listar Usuarios
-router.route("/user-list").get((req, res, next) => {
+router.route("/list").get((req, res, next) => {
   User.find((error, data) => {
     if (error) {
       return next(error);

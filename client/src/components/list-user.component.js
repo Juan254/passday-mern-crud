@@ -4,10 +4,12 @@ import jwt_decode from "jwt-decode";
 import setAuthToken from "../utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "../actions/authActions";
 import store from "../store";
+import axios from "axios";
 
 import Table from "react-bootstrap/Table";
 import ModalTitle from "react-bootstrap/ModalTitle";
 import { Link } from "react-router-dom";
+import UsersTable from "./UsersTable";
 
 
 // Check for token to keep user logged in
@@ -29,11 +31,39 @@ if (decoded.exp < currentTime) {
   }
  } 
 export default class UserList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      usuarios: [],
+    };
+  }
   componentWillMount() {
     // If logged in and user navigates to Register page, should redirect them to dashboard
     if (!localStorage.jwtToken) {
       window.location.href = "./login";
-    }
+      
+    } 
+  }
+  
+  componentDidMount(){
+    axios
+      .get("/api/users/list")
+      .then((res) => {
+        this.setState({
+          usuarios: res.data,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      console.log(this.state.usuarios);
+
+  }
+  DataTable() {
+    // this.componentDidMount();
+    return this.state.usuarios.map((res, i) => {
+      return <UsersTable obj={res} key={i} />;
+    });
   }
   render() {
     return (
@@ -49,14 +79,7 @@ export default class UserList extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Nombre 1</td>
-              <td>correo1@mail.com</td>
-            </tr>
-            <tr>
-              <td>Nombre 2</td>
-              <td>corre2@mail.com</td>
-            </tr>
+          {this.DataTable()}
           </tbody>
         </Table>
         <Link to={"/create-user"} className="m-3 button-accept btn btn-primary btn-block btn-md w-50">

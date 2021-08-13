@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+# LLave de la bd
+/config/keys.js
 
 # testing
 /coverage
