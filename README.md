@@ -37,7 +37,7 @@ Es el encargado de gestionar:
 
 El tiempo del ciclo 4 es limitado, por lo que se optó por un proyecto compacto y sencillo, el cual se puedan realizar las operaciones básicas de la problemática propuestas y, adicionalmente, tareas administrativas realizadas por el usuario administrador y proveedor.
 
-#Metodología de trabajo
+# Metodología de trabajo
 
 La metodología utilizada para el desarrollo del aplicativo web será una metodología MERN.
 
@@ -111,7 +111,7 @@ el proyecto propuesto por MinTic se compone de 6 Sprint(contando el sprint 0), d
 | <center> ![github.png](/.attachments/github-9d6977a9-6be6-4b22-ab2c-1dc6e5fa2a5a.png) </center> | **GitHub:** GitHub es un controlador de versiones y una plataforma colaborativa para el desarrollo de software.|
 | <center> ![azuredevops.png](/.attachments/azuredevops-ba4711a7-9d67-49f2-91cd-f4fd33315b1b.png) </center> | **Azure DevOps server:** es un producto de Microsoft que proporciona control de versiones, informes, gestión de requisitos, gestión de proyectos, compilaciones automatizadas, pruebas y capacidades de gestión de versiones. Cubre todo el ciclo de vida de la aplicación y habilita las capacidades de DevOps. [Más información Aquí](https://en.wikipedia.org/wiki/Azure_DevOps_Server)|
 
-#Grupo de trabajo
+# Grupo de trabajo
 
 |**Nombre**|**Correo**|**Función dentro del proyecto**|
 |--|--|--|
