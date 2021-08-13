@@ -2,9 +2,9 @@ let mongoose = require("mongoose"),
   express = require("express"),
   router = express.Router();
 // passday Model
-const passdaySchema = require("../../models/passday");
+const passdaySchema = require("../../models/pasadias");
 // CREATE passday
-router.route("/create-passday").post((req, res, next) => {
+router.route("/create").post((req, res, next) => {
   passdaySchema.create(req.body, (error, data) => {
     if (error) {
       return next(error);
@@ -15,7 +15,7 @@ router.route("/create-passday").post((req, res, next) => {
   });
 });
 // READ Passday
-router.route("/").get((req, res, next) => {
+router.route("/list").get((req, res, next) => {
   passdaySchema.find((error, data) => {
     if (error) {
       return next(error);
@@ -25,7 +25,7 @@ router.route("/").get((req, res, next) => {
   });
 });
 // Get Single passday
-router.route("/edit-passday/:id").get((req, res, next) => {
+router.route("/edit/:id").get((req, res, next) => {
   passdaySchema.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error);
@@ -35,7 +35,7 @@ router.route("/edit-passday/:id").get((req, res, next) => {
   });
 });
 // Update passday
-router.route("/update-passday/:id").put((req, res, next) => {
+router.route("/update/:id").put((req, res, next) => {
   passdaySchema.findByIdAndUpdate(
     req.params.id,
     {

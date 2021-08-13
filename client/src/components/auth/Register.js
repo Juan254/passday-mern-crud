@@ -48,7 +48,7 @@ class Register extends Component {
     };
   }
   componentWillMount() {
-    // If logged in and user navigates to Register page, should redirect them to dashboard
+    // If logged in and user navigates to Register page, should redirect them to login
     if (!localStorage.jwtToken) {
       window.location.href = "./login";
     }

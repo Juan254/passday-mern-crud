@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 
 const passport = require("passport");
 const users = require("./routes/api/users.js");
-const passdays = require("./routes/api/passdays");
+const passdays = require("./routes/api/pasadias");
 
 const app = express();
 // Bodyparser middleware
@@ -28,7 +28,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
-app.use("/api/passdays", passdays);
+app.use("/api/pasadias", passdays);
 
 const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose
 app.listen(port, () => console.log(`Servidor iniciado y funcionando en el puerto: ${port} !`));
