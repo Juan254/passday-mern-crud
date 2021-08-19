@@ -49,11 +49,8 @@ const PassdaySchema = new Schema({
   },
   RNT: {
     type: String,
-<<<<<<< HEAD
     default: "-"
-=======
-    required: true,
->>>>>>> 708d54c4cab562fd79d0b3fbed697586993f0871
+
   },
   date: {
     type: Date,
