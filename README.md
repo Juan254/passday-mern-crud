@@ -111,16 +111,6 @@ el proyecto propuesto por MinTic se compone de 6 Sprint(contando el sprint 0), d
 | <center> ![github.png](/.attachments/github-9d6977a9-6be6-4b22-ab2c-1dc6e5fa2a5a.png) </center> | **GitHub:** GitHub es un controlador de versiones y una plataforma colaborativa para el desarrollo de software.|
 | <center> ![azuredevops.png](/.attachments/azuredevops-ba4711a7-9d67-49f2-91cd-f4fd33315b1b.png) </center> | **Azure DevOps server:** es un producto de Microsoft que proporciona control de versiones, informes, gestión de requisitos, gestión de proyectos, compilaciones automatizadas, pruebas y capacidades de gestión de versiones. Cubre todo el ciclo de vida de la aplicación y habilita las capacidades de DevOps. [Más información Aquí](https://en.wikipedia.org/wiki/Azure_DevOps_Server)|
 
-# Grupo de trabajo
-
-|**Nombre**|**Correo**|**Función dentro del proyecto**|
-|--|--|--|
-| Giovany Andres Angel Avila | neo_angel64@hotmail.com | Desarrollo del backend|
-| Juan Esteban Quintero Bolaños | jestebanqb@gmail.com | Scrum Master|
-| Heriberto Perez Belandria | heribertp12@gmail.com | Desarrollo del frontend|
-| Cristian Parra | ccamiloparra@ucundinamarca.edu.co | Pruebas unitarias |
-| Carlos Eduardo Niño | ninohilarion@yahoo.com | desarrollo de la base de datos|
-
 # Documentación:
 
 -  [historias de usuario Pasadías-5e4d68a2-6ffd-4106-b510-4cff06ef3ea5 (2).pdf](https://github.com/Juan254/passday-mern-crud/files/6970686/historias.de.usuario.Pasadias-5e4d68a2-6ffd-4106-b510-4cff06ef3ea5.2.pdf)
