@@ -33,7 +33,7 @@ code {
   color: #81b214;
 }
 .nav-link.navi-sub-link, .dropdown-toggle.nav-link {
-  color: #ffcc29;
+  color: aliceblue;
   font-size: 18px;
   text-decoration: none;
 }
@@ -114,4 +114,29 @@ tr>th{
   font-size: 1.5em;
   color: aliceblue;
   font-weight: normal;
+}
+.lista-errors {
+  text-align: initial;
+}
+.logout-part, .login-part{
+  display: block;
+}
+.orange-welcome{
+  color: #F58634;
+}
+.card-img-top{
+  height: 200px;
+}
+.card.border-primary{
+  border-color: #7f9948 !important; 
+}
+
+.imagen-detail{
+  width: 500px !important;
+  height: 245px !important;
+}
+.table.table-bordered>tbody>tr>td[class="table-head"]{
+  background-color: #206a5d;
+  color: aliceblue;
+  font-weight: bold;
 }

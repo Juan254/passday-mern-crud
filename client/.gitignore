@@ -4,11 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-<<<<<<< HEAD
-# LLave de la bd
-=======
->>>>>>> 708d54c4cab562fd79d0b3fbed697586993f0871
-/config/keys.js
+./config/keys.js
 
 # testing
 /coverage
@@ -26,4 +22,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
